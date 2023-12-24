@@ -1,2 +1,2 @@
 # GO-IT-WEB
-Module web
+All programs from second module (web)
