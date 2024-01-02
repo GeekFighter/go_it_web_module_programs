@@ -1,7 +1,9 @@
 import requests
 
 # Виконати GET-запит до API ПриватБанку
-response = requests.get('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+response = requests.get(
+    "https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5"
+)
 
 # Перевірити, чи успішно виконаний запит
 if response.status_code == 200:
