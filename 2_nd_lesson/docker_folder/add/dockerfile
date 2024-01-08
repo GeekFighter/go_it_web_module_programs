@@ -1,0 +1,18 @@
+FROM python:3.12
+
+# Копіюємо файл from_command.py з локальної файлової системи (зліва) до контейнера,
+# який буде створено. Шлях /from_command.py вказує, куди саме в контейнері хочемо скопіювати
+COPY using_add.py /using_add.py
+
+# Копіюємо архів та автоматично розпаковуємо його
+ADD archive_test.gz .
+
+# Копіюємо файл з URL
+ADD https://wallpaperscraft.ru/download/ozero_gora_voda_1143639/1920x1080 .
+
+# Копіюємо файл та змінюємо його ім'я
+ADD my_text.txt renamed_file.txt
+
+# Інші інструкції у Dockerfile...
+
+CMD [ "python3", "/using_add.py" ]
